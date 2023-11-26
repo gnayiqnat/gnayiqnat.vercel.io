@@ -6,14 +6,21 @@ import './App.css';
 // Pages
 import Homepage from './homepage';
 import { ThemeProvider, createTheme } from '@mui/material';
+import { useEffect } from 'react';
+import InProgressWarning from './InProgressWarning';
 
 // ---------------------
 function App() {
+	const [IsFirstTime, setIsFirstTime] = useState(true)
+	useEffect(() => {
+		document.cookie = 'isFirstTime=false'
+	}, [IsFirstTime])
+
 	return (
 		<>
 				<BrowserRouter>
 					<Routes>
-						<Route exact path='/' element={<Homepage />} />
+						<Route exact path='/' element={document.cookie === 'isFirstTime=false' ? <Homepage /> : <InProgressWarning setIsFirstTime={setIsFirstTime} />} />
 					</Routes>
 				</BrowserRouter>
 		</>
