@@ -9,14 +9,14 @@ export default function InProgressWarning(props) {
 				justifyContent: 'center',
 				alignItems: 'center',
 				flexDirection: 'column',
-				padding: '130px',
+				height: '100vh',
 				gap: '30px',
 			}}
 		>
 			<Grid item>
 				<Typography
 					align='center'
-					sx={{ maxWidth: 'clamp(500px, 80vw, 700px)', fontSize: '1.5rem' }}
+					sx={{ fontSize: '1.5rem', margin: '0px 25px' }}
 				>
 					This website is still in its baby stages. Sorry for any bugs or
 					missing stuff you might find. Thank you for understanding.
@@ -28,14 +28,17 @@ export default function InProgressWarning(props) {
 						props.setIsFirstTime(false);
 					}}
 					style={{
-						backgroundColor: '#c60054',
-						borderStyle: 'none',
+						backgroundColor: 'transparent',
+						borderStyle: 'solid',
+						borderColor: '#c60054',
 						borderRadius: 20,
-                        padding: '13px 15px',
-                        cursor: 'pointer',
+						padding: '13px 15px',
+						cursor: 'pointer',
 					}}
 				>
-					<Typography sx={{ color: 'white', fontSize: '20px', fontWeight: 500 }}>
+					<Typography
+						sx={{ color: '#c60054', fontSize: '20px', fontWeight: 500 }}
+					>
 						Proceed anyway
 					</Typography>
 				</motion.button>
