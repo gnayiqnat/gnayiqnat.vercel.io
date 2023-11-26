@@ -9,7 +9,7 @@ export default function InProgressWarning(props) {
 				justifyContent: 'center',
 				alignItems: 'center',
 				flexDirection: 'column',
-				height: '100vh',
+				height: '100dvh',
 				gap: '30px',
 			}}
 		>
