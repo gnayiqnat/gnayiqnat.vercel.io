@@ -12,57 +12,52 @@ export default function Homepage() {
 			<Grid
 				container
 				sx={{
-					padding: '2rem',
-					paddingBottom: '0',
-					paddingTop: '1.5rem',
+					padding: '30px 20px 0px 20px',
 					justifyContent: 'space-between',
-					alignItems: 'end',
+					alignItems: 'center',
 				}}
 			>
-				<img src={logo} style={{ width: '60px' }} />
-				<FiMenu style={{ fontSize: '40px' }} />
+				<Grid item>
+					<img src={logo} style={{ width: '60px' }} />
+				</Grid>
+				<Grid item>
+					<FiMenu style={{ fontSize: '40px' }} />
+				</Grid>
 			</Grid>
-			<section>
+			<section style={{ marginBottom: 'clamp(300px, 20vh, 30vh)' }}>
 				<Grid
 					container
 					sx={{
-						marginTop: -4,
-						rowGap: 8,
-						justifyContent: 'center',
 						flexDirection: 'column',
-						height: '92vh',
+						justifyContent: 'center',
+						alignItems: 'center',
+
+						marginTop: 'clamp(100px, 20vh, 30vh)',
+						gap: '30px',
 					}}
 				>
 					<Grid item>
-						<Grid
-							container
-							sx={{ justifyContent: 'center', alignItems: 'center' }}
+						<Typography
+							variant='h2'
+							sx={{
+								fontWeight: 700,
+								lineHeight: 0.7,
+								fontSize: { xs: 50 },
+							}}
 						>
-							<Box>
-								<Typography
-									variant='h2'
-									sx={{
-										fontWeight: 700,
-										lineHeight: 0.7,
-										fontSize: { xs: 50 },
-									}}
-								>
-									i am
-								</Typography>
-								<Typography
-									sx={{
-										color: '#c60054',
-										fontWeight: 700,
-										lineHeight: 0.5,
-										fontSize: { xs: 60, sm: 80, md: 100 },
-									}}
-									gutterBottom
-								>
-									gnayiqnat.
-								</Typography>
-								<Typography></Typography>
-							</Box>
-						</Grid>
+							i am
+						</Typography>
+						<Typography
+							sx={{
+								color: '#c60054',
+								fontWeight: 700,
+								lineHeight: 0.5,
+								fontSize: { xs: 60, sm: 80, md: 100 },
+							}}
+							gutterBottom
+						>
+							gnayiqnat.
+						</Typography>
 					</Grid>
 					<Grid item>
 						<ExploreButton />
@@ -70,13 +65,16 @@ export default function Homepage() {
 				</Grid>
 			</section>
 			<section>
-				<Grid container sx={{ padding: 5, height: '100vh' }}>
-					<Typography variant='h3' sx={{ color: '#c60054', fontWeight: 600 }}>
+				<Grid container sx={{ padding: '5vw', height: '100dvh'}}>
+					<Typography
+						variant='h3'
+						sx={{ color: '#c60054', fontWeight: 600, marginBottom: '30px' }}
+					>
 						My Works
 					</Typography>
-					<Grid container sx={{ flexDirection: 'column' }}>
+					<Grid container sx={{ flexDirection: 'column', gap: '30px', height: '80dvh' }}>
 						<Grid item sx={{ backgroundColor: 'transparent' }}>
-							<Grid container sx={{ columnGap: 4 }}>
+							<a href='https://digitalascent.space'>
 								<Card
 									variant='outlined'
 									sx={{
@@ -84,14 +82,20 @@ export default function Homepage() {
 										borderColor: '#c60054',
 										padding: 1.5,
 										borderRadius: 3,
+										width: '330px',
+										maxWidth: '80vw',
 									}}
 								>
 									<img
-										style={{ width: 330, borderRadius: 3 }}
+										style={{
+											width: 'inherit',
+											maxWidth: 'inherit',
+											borderRadius: 3,
+										}}
 										src={digitalascentPeek}
 									/>
 								</Card>
-							</Grid>
+							</a>
 						</Grid>
 					</Grid>
 				</Grid>
@@ -109,22 +113,20 @@ function ExploreButton() {
 
 	return (
 		<>
-			<Grid container sx={{ justifyContent: 'center' }}>
-				<motion.button
-					animate={exploreClick}
-					onClick={handleExploreClick}
-					style={{
-						backgroundColor: '#c60054',
-						borderStyle: 'none',
-						borderRadius: 20,
-						padding: '15px 20px',
-					}}
-				>
-					<Typography sx={{ color: 'white', fontSize: 20, fontWeight: 500 }}>
-						Explore my works
-					</Typography>
-				</motion.button>
-			</Grid>
+			<motion.button
+				animate={exploreClick}
+				onClick={handleExploreClick}
+				style={{
+					backgroundColor: '#c60054',
+					borderStyle: 'none',
+					borderRadius: 20,
+					padding: '15px 20px',
+				}}
+			>
+				<Typography sx={{ color: 'white', fontSize: 20, fontWeight: 500 }}>
+					Explore my works
+				</Typography>
+			</motion.button>
 		</>
 	);
 }
