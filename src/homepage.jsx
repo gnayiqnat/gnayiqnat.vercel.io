@@ -20,7 +20,7 @@ export default function Homepage() {
 			<Grid
 				container
 				sx={{
-					padding: '30px 20px 0px 20px',
+					padding: '30px 25px 0px 25px',
 					justifyContent: 'space-between',
 					alignItems: 'center',
 				}}
@@ -146,28 +146,28 @@ export default function Homepage() {
 						sx={{ flexDirection: 'column', gap: '30px', height: '80dvh' }}
 					>
 						<Grid item sx={{ backgroundColor: 'transparent' }}>
-							<a href='https://digitalascent.space'>
-								<Card
-									variant='outlined'
-									sx={{
-										backgroundColor: 'transparent',
-										borderColor: '#c60054',
-										padding: 1.5,
-										borderRadius: 3,
-										width: '330px',
-										maxWidth: '80vw',
-									}}
-								>
+							<Card
+								variant='outlined'
+								sx={{
+									backgroundColor: 'transparent',
+									borderColor: '#c60054',
+									padding: 1.5,
+									borderRadius: 3,
+									width: '330px',
+									maxWidth: '80vw',
+								}}
+							>
+								<a target='_blank' href='https://digitalascent.space'>
 									<img
 										style={{
-											width: 'inherit',
-											maxWidth: 'inherit',
+											width: '330px',
+											maxWidth: '80vw',
 											borderRadius: 3,
 										}}
 										src={digitalascentPeek}
 									/>
-								</Card>
-							</a>
+								</a>
+							</Card>
 						</Grid>
 					</Grid>
 				</Grid>
