@@ -1,8 +1,16 @@
-import { Typography, Box, Grid, Card, Button } from '@mui/material';
+import {
+	Typography,
+	Box,
+	Grid,
+	Card,
+	Button,
+	Avatar,
+	IconButton,
+} from '@mui/material';
 import { motion, useAnimationControls } from 'framer-motion';
 
 // icons
-import { FiMenu } from 'react-icons/fi';
+import { FiGithub, FiMenu } from 'react-icons/fi';
 import logo from '../public/gnayiqnat-logo.png';
 import digitalascentPeek from '../public/digitalascent-peek.png';
 
@@ -63,16 +71,80 @@ export default function Homepage() {
 						<ExploreButton />
 					</Grid>
 				</Grid>
+				<Grid
+					container
+					sx={{
+						position: 'absolute',
+						width: '100vw',
+
+						bottom: '0%',
+						left: '0%',
+
+						justifyContent: 'end',
+						padding: '20px',
+					}}
+				>
+					<Grid item>
+						<Button
+							target='_blank'
+							href='https://github.com/gnayiqnat'
+							sx={{
+								color: '#ffffff',
+								borderStyle: 'solid',
+								borderWidth: '2px',
+								borderColor: '#ffffff',
+
+								padding: '10px 20px',
+
+								gap: '10px',
+								textTransform: 'none',
+
+								borderRadius: '30px',
+							}}
+						>
+							<Typography sx={{ fontSize: '18px' }}>Github</Typography>
+							<FiGithub size='18px' />
+						</Button>
+					</Grid>
+				</Grid>
+				<Box
+					sx={{
+						width: '100vw',
+						maxWidth: '100vw',
+						overflow: 'hidden',
+						position: 'absolute',
+						opacity: 0.07,
+						zIndex: '-1',
+						top: '0%',
+						alignItems: 'start',
+					}}
+				>
+					<Typography
+						sx={{
+							color: '#c60054',
+							fontWeight: 700,
+							lineHeight: 0.5,
+							fontSize: 335,
+							marginLeft: '-100px',
+						}}
+						gutterBottom
+					>
+						gnayiqnatgnayiqnat
+					</Typography>
+				</Box>
 			</section>
 			<section>
-				<Grid container sx={{ padding: '5vw', height: '100dvh'}}>
+				<Grid container sx={{ padding: '5vw', height: '100dvh' }}>
 					<Typography
 						variant='h3'
 						sx={{ color: '#c60054', fontWeight: 600, marginBottom: '30px' }}
 					>
 						My Works
 					</Typography>
-					<Grid container sx={{ flexDirection: 'column', gap: '30px', height: '80dvh' }}>
+					<Grid
+						container
+						sx={{ flexDirection: 'column', gap: '30px', height: '80dvh' }}
+					>
 						<Grid item sx={{ backgroundColor: 'transparent' }}>
 							<a href='https://digitalascent.space'>
 								<Card
