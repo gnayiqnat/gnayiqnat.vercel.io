@@ -11,18 +11,35 @@ import InProgressWarning from './InProgressWarning';
 
 // ---------------------
 function App() {
-	const [IsFirstTime, setIsFirstTime] = useState(true)
+	const [IsFirstTime, setIsFirstTime] = useState(true);
+
 	useEffect(() => {
-		document.cookie = 'isFirstTime=false'
-	}, [IsFirstTime])
+		if (window.location.href.includes('?bypassWarning=true')) {
+			setIsFirstTime(false);
+		}
+	}, []);
+	
+	useEffect(() => {
+		document.cookie = 'isFirstTime=false';
+	}, [IsFirstTime]);
 
 	return (
 		<>
-				<BrowserRouter>
-					<Routes>
-						<Route exact path='/' element={document.cookie === 'isFirstTime=false' ? <Homepage /> : <InProgressWarning setIsFirstTime={setIsFirstTime} />} />
-					</Routes>
-				</BrowserRouter>
+			<BrowserRouter>
+				<Routes>
+					<Route
+						exact
+						path='/'
+						element={
+							document.cookie === 'isFirstTime=false' ? (
+								<Homepage />
+							) : (
+								<InProgressWarning setIsFirstTime={setIsFirstTime} />
+							)
+						}
+					/>
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
