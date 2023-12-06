@@ -28,9 +28,6 @@ export default function Homepage() {
 				<Grid item>
 					<img src={logo} style={{ width: '60px' }} />
 				</Grid>
-				<Grid item>
-					<FiMenu style={{ fontSize: '40px' }} />
-				</Grid>
 			</Grid>
 			<section style={{ marginBottom: 'clamp(300px, 20vh, 30vh)' }}>
 				<Grid
