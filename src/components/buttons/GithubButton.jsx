@@ -9,9 +9,6 @@ function GithubButton() {
 			target='_blank'
 			href='https://github.com/gnayiqnat'
 			sx={{
-				position: 'absolute',
-				right: '1%',
-				bottom: '3%',
 
 				color: '#ffffff',
 				borderStyle: 'solid',

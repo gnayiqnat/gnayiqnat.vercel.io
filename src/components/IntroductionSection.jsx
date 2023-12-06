@@ -1,12 +1,12 @@
 // IntroductionSection.jsx
 import React from 'react';
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Typography, Button, Box } from '@mui/material';
 import ButtonOutlined from './buttons/ButtonOutlined';
 import GithubButton from './buttons/GithubButton';
 
 function IntroductionSection() {
 	return (
-		<>
+		<Box sx={{marginBottom: '5vh'}}>
 			<Grid
 				container
 				sx={{
@@ -14,9 +14,9 @@ function IntroductionSection() {
 					justifyContent: 'center',
 					alignItems: 'center',
 					marginTop: 'clamp(100px, 20vh, 30vh)',
-                    gap: '30px',
-                    
-                    marginBottom: '20vh',
+					gap: '30px',
+
+					marginBottom: '13vh',
 				}}
 			>
 				<Grid item>
@@ -48,7 +48,15 @@ function IntroductionSection() {
 					</Grid>
 				</Grid>
 			</Grid>{' '}
-		</>
+			<Grid
+				container
+				sx={{ padding: '0px 20px', width: '100vw', justifyContent: 'end' }}
+			>
+				<Grid item>
+					<GithubButton />
+				</Grid>
+			</Grid>
+		</Box>
 	);
 }
 
