@@ -11,12 +11,13 @@ export default function InProgressWarning(props) {
 				flexDirection: 'column',
 				height: '100dvh',
 				gap: '30px',
+
 			}}
 		>
 			<Grid item>
 				<Typography
 					align='center'
-					sx={{ fontSize: '1.5rem', margin: '0px 25px' }}
+					sx={{ fontSize: '1.5rem', margin: '0px 25px', maxWidth: '700px' }}
 				>
 					This website is still in its baby stages. Sorry for any bugs or
 					missing stuff you might find. Thank you for understanding.
