@@ -11,7 +11,6 @@ function BackgroundTypography() {
 				overflow: 'hidden',
 				position: 'absolute',
 				opacity: 0.07,
-				zIndex: '-1',
 				top: '0%',
 				alignItems: 'start',
 			}}
