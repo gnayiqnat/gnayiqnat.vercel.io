@@ -14,6 +14,7 @@ export default function ButtonOutlined(props) {
 				padding: '13px 15px',
 				cursor: 'pointer',
 			}}
+			whileHover={{opacity: 0.3}}
 		>
 			<Typography sx={{ color: '#c60054', fontSize: '20px', fontWeight: 500 }}>
 				{props.text}
