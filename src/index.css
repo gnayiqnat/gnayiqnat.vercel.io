@@ -13,6 +13,5 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
 }
