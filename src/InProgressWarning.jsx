@@ -1,5 +1,6 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
+import ButtonOutlined from './components/buttons/ButtonOutlined';
 
 export default function InProgressWarning(props) {
 	return (
@@ -10,8 +11,7 @@ export default function InProgressWarning(props) {
 				alignItems: 'center',
 				flexDirection: 'column',
 				height: '100dvh',
-				gap: '30px',
-
+				gap: '25px',
 			}}
 		>
 			<Grid item>
@@ -26,8 +26,10 @@ export default function InProgressWarning(props) {
 			<Grid item>
 				<motion.button
 					onClick={() => {
+						document.cookie = 'isFirstTime=false';
 						props.setIsFirstTime(false);
 					}}
+					whileHover={{ opacity: 0.3 }}
 					style={{
 						backgroundColor: 'transparent',
 						borderStyle: 'solid',
