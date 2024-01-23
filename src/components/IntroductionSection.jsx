@@ -21,7 +21,7 @@ function IntroductionSection(props) {
 				}}
 			>
 				<Grid item>
-					<Typography
+					{/* <Typography
 						variant='h2'
 						sx={{
 							fontWeight: 700,
@@ -30,19 +30,30 @@ function IntroductionSection(props) {
 						}}
 					>
 						i am
-					</Typography>
+					</Typography> */}
 					<Typography
-						gutterBottom
 						sx={{
 							color: '#c60054',
 							fontWeight: 700,
 							lineHeight: 0.5,
 							fontSize: { xs: 60, sm: 80, md: 100 },
+							marginBottom: '35px',
 						}}
 					>
-						gnayiqnat.
+						gnayiqnat
 					</Typography>
-					<Grid container sx={{ justifyContent: 'center', padding: '30px' }}>
+					<Typography
+						align='center'
+						sx={{
+							
+							color: '#767676',
+							fontSize: '23px',
+							fontFamily: 'Inter',
+						}}
+					>
+						A self-taught full-stack web developer
+					</Typography>
+					<Grid container sx={{ justifyContent: 'center', padding: '30px', marginTop: '10px', marginBottom: '-10px' }}>
 						<Grid item>
 							<ExploreButton
 								exploreIsClicked={props.exploreIsClicked}
@@ -52,7 +63,7 @@ function IntroductionSection(props) {
 						</Grid>
 					</Grid>
 				</Grid>
-			</Grid>{' '}
+			</Grid>
 			<Grid
 				container
 				sx={{
