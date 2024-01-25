@@ -15,8 +15,8 @@ function App() {
 	useEffect(() => {
 		if (window.location.href.includes('?bypassWarning=true')) {
 			setIsFirstTime(false);
-			document.cookie = 'isFirstTime=false; SameSite=Strict; Secure';
-		} else if (IsFirstTime === false) {
+		}
+		if (IsFirstTime === false) {
 			document.cookie = 'isFirstTime=false; SameSite=Strict; Secure';
 		}
 	}, [IsFirstTime]);
