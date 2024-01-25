@@ -32,6 +32,7 @@ function IntroductionSection(props) {
 						i am
 					</Typography> */}
 					<Typography
+						align='center'
 						sx={{
 							color: '#c60054',
 							fontWeight: 700,
@@ -56,8 +57,6 @@ function IntroductionSection(props) {
 					<Grid container sx={{ justifyContent: 'center', padding: '30px', marginTop: '10px', marginBottom: '-10px' }}>
 						<Grid item>
 							<ExploreButton
-								exploreIsClicked={props.exploreIsClicked}
-								setExploreIsClicked={props.setExploreIsClicked}
 								text='Explore my works'
 							/>
 						</Grid>
@@ -84,9 +83,6 @@ function ExploreButton(props) {
 	return (
 		<>
 			<motion.button
-				onClick={() => {
-					props.setExploreIsClicked(true);
-				}}
 				style={{
 					backgroundColor: 'transparent',
 					borderStyle: 'solid',
@@ -96,6 +92,7 @@ function ExploreButton(props) {
 					cursor: 'pointer',
 				}}
 				whileHover={{ opacity: 0.3 }}
+				onClick={() => {document.getElementById("sec-2").scrollIntoView({behavior: 'smooth'})}}
 			>
 				<Typography
 					sx={{ color: '#c60054', fontSize: '20px', fontWeight: 500 }}

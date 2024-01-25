@@ -2,13 +2,22 @@
 import React, { useRef } from 'react';
 import { Grid, Card, Typography, Box } from '@mui/material';
 import digitalascentPeek from '/digitalascent-peek.png';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 function WorksSection() {
 	const MotionCard = motion(Card);
 
 	return (
-		<section>
-			<Grid container sx={{ padding: '5vh 5vw', height: '100dvh' }}>
+		<section id='sec-2'>
+			<Grid
+				container
+				sx={{
+					margin: 'auto',
+					marginTop: 10,
+					marginBottom: -3,
+					padding: 3,
+					height: '100dvh',
+				}}
+			>
 				{/* 
 				<Typography
 					variant='h3'
@@ -19,8 +28,13 @@ function WorksSection() {
 				 */}
 				<Grid
 					container
-					sx={{ flexDirection: 'column', gap: '30px', height: '80dvh' }}
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						height: '80dvh',
+					}}
 				>
+					<Grid item></Grid>
 					<Grid item>
 						<MotionCard
 							whileHover={{ borderColor: '#c60054', opacity: 1 }}
