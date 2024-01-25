@@ -5,7 +5,6 @@ import './App.css';
 
 // Pages
 import Homepage from './homepage';
-import { ThemeProvider, createTheme } from '@mui/material';
 import { useEffect } from 'react';
 import InProgressWarning from './InProgressWarning';
 
@@ -16,7 +15,9 @@ function App() {
 	useEffect(() => {
 		if (window.location.href.includes('?bypassWarning=true')) {
 			setIsFirstTime(false);
-			document.cookie = 'isFirstTime=false';
+			document.cookie = 'isFirstTime=false; SameSite=Strict; Secure';
+		} else if (IsFirstTime === false) {
+			document.cookie = 'isFirstTime=false; SameSite=Strict; Secure';
 		}
 	}, [IsFirstTime]);
 
@@ -28,7 +29,7 @@ function App() {
 						exact
 						path='/'
 						element={
-							document.cookie === 'isFirstTime=false' ? (
+							IsFirstTime === false || document.cookie.includes('isFirstTime=false') ? (
 								<Homepage />
 							) : (
 								<InProgressWarning setIsFirstTime={setIsFirstTime} />
