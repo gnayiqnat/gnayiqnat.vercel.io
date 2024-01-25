@@ -26,7 +26,6 @@ export default function InProgressWarning(props) {
 			<Grid item>
 				<motion.button
 					onClick={() => {
-						document.cookie = 'isFirstTime=false';
 						props.setIsFirstTime(false);
 					}}
 					whileHover={{ opacity: 0.3 }}
