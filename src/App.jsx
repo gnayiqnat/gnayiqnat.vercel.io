@@ -13,7 +13,7 @@ function App() {
 	const [IsFirstTime, setIsFirstTime] = useState(true);
 
 	useEffect(() => {
-		if (window.location.href.includes('?bypassWarning=true')) {
+		if (window.location.href.includes('?bypass')) {
 			setIsFirstTime(false);
 		}
 		if (IsFirstTime === false) {
