@@ -8,14 +8,17 @@ import { motion } from 'framer-motion';
 
 export default function Homepage() {
 	return (
-		<motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5, duration: 0.75}}>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ delay: 0.5, duration: 0.75 }}
+		>
 			<Header />
 
 			<IntroductionSection />
 
 			<WorksSection />
 
-\			
 			{/* Backdrop */}
 			<BackgroundTypography />
 		</motion.div>
