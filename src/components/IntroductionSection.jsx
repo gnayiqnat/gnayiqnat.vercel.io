@@ -69,6 +69,7 @@ function IntroductionSection(props) {
 					width: '100vw',
 					padding: '20px',
 					justifyContent: 'end',
+					padding: '10px 30px',
 				}}
 			>
 				<Grid item>
