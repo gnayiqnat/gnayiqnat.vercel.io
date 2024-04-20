@@ -1,13 +1,13 @@
 // WorksSection.js
 import React, { useRef } from 'react';
 import { Grid, Card, Typography, Box } from '@mui/material';
-import digitalascentPeek from '/digitalascent-peek.png';
 import { motion, useScroll } from 'framer-motion';
 function WorksSection() {
     const MotionCard = motion(Card);
 
     const listofWorks = [
-        { url: 'https://digitalascent.space', img: digitalascentPeek },
+        { url: 'https://digitalascent.space', img: '/digitalascent-peek.png' },
+		{ url: 'https://msssa.pages.dev', img: '/msssa-peek.png'}
     ];
     return (
         <section id='sec-2'>
@@ -33,7 +33,8 @@ function WorksSection() {
                     container
                     sx={{
                         display: 'flex',
-                        flexDirection: 'column',
+                        flexDirection: 'row',
+						gap: '30px',
                         height: '80dvh',
                     }}
                 >
