@@ -5,6 +5,7 @@ import Header from './components/Header';
 import IntroductionSection from './components/IntroductionSection';
 import WorksSection from './components/WorksSection';
 import { motion } from 'framer-motion';
+import LanguageSection from './components/LanguageSection';
 
 export default function Homepage() {
 	return (
@@ -13,11 +14,13 @@ export default function Homepage() {
 			animate={{ opacity: 1 }}
 			transition={{ delay: 0.5, duration: 0.75 }}
 		>
-			<Header />
-
+			<Header /> 
+			
 			<IntroductionSection />
 
 			<WorksSection />
+
+			<LanguageSection />
 
 			{/* Backdrop */}
 			<BackgroundTypography />

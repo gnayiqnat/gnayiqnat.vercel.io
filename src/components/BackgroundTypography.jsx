@@ -17,7 +17,7 @@ function BackgroundTypography() {
 		>
 			<Typography
 				sx={{
-					color: '#c60054',
+					color: 'primary.main',
 					fontWeight: 700,
 					lineHeight: 0.5,
 					fontSize: 335,

@@ -34,7 +34,7 @@ function IntroductionSection(props) {
 					<Typography
 						align='center'
 						sx={{
-							color: '#c60054',
+							color: 'primary.main',
 							fontWeight: 700,
 							lineHeight: 0.5,
 							fontSize: { xs: 60, sm: 80, md: 100 },
@@ -46,19 +46,24 @@ function IntroductionSection(props) {
 					<Typography
 						align='center'
 						sx={{
-							
-							color: '#767676',
+							color: 'secondary.main',
 							fontSize: '23px',
 							fontFamily: 'Inter',
 						}}
 					>
-						A self-taught full-stack web developer
+						Full-stack web developer
 					</Typography>
-					<Grid container sx={{ justifyContent: 'center', padding: '30px', marginTop: '10px', marginBottom: '-10px' }}>
+					<Grid
+						container
+						sx={{
+							justifyContent: 'center',
+							padding: '30px',
+							marginTop: '10px',
+							marginBottom: '-10px',
+						}}
+					>
 						<Grid item>
-							<ExploreButton
-								text='Explore my works'
-							/>
+							<ExploreButton text='Explore my works' />
 						</Grid>
 					</Grid>
 				</Grid>
@@ -83,24 +88,36 @@ function IntroductionSection(props) {
 function ExploreButton(props) {
 	return (
 		<>
-			<motion.button
-				style={{
-					backgroundColor: 'transparent',
-					borderStyle: 'solid',
-					borderColor: '#c60054',
-					borderRadius: 20,
+			<Button
+				variant='outlined'
+				sx={{
+					backgroundColor: 'primary.main',
+					borderRadius: 3,
 					padding: '13px 15px',
 					cursor: 'pointer',
+					textTransform: 'none',
 				}}
-				whileHover={{ opacity: 0.3 }}
-				onClick={() => {document.getElementById("sec-2").scrollIntoView({behavior: 'smooth'})}}
 			>
-				<Typography
-					sx={{ color: '#c60054', fontSize: '20px', fontWeight: 500 }}
+				<motion.div
+					whileHover={{ opacity: 0.3 }}
+					onClick={() => {
+						document
+							.getElementById('sec-2')
+							.scrollIntoView({ behavior: 'smooth' });
+					}}
 				>
-					{props.text}
-				</Typography>
-			</motion.button>
+					<Typography
+						sx={{
+							fontFamily: 'Nunito',
+							color: 'white',
+							fontSize: '20px',
+							fontWeight: 400,
+						}}
+					>
+						{props.text}
+					</Typography>
+				</motion.div>
+			</Button>
 		</>
 	);
 }

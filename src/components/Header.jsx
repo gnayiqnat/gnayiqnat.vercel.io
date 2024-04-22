@@ -13,9 +13,9 @@ function Header() {
 				alignItems: 'center',
 			}}
 		>
-			<Grid item>
+			{/* <Grid item>
 				<img src={logo} style={{ width: '60px' }} />
-			</Grid>
+			</Grid> */}
 		</Grid>
 	);
 }
