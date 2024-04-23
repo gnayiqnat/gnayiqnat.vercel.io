@@ -4,33 +4,21 @@ import { Grid, Typography, Button, Box } from '@mui/material';
 import ButtonOutlined from './buttons/ButtonOutlined';
 import GithubButton from './buttons/GithubButton';
 import { motion } from 'framer-motion';
+import ButtonFilled from './buttons/ButtonFilled';
 
 function IntroductionSection(props) {
 	return (
-		<>
+		<Box sx={{height: '100dvh',maxHeight: '100dvh', display: 'grid', placeContent: 'center'}}>
 			<Grid
 				container
 				sx={{
 					flexDirection: 'column',
 					justifyContent: 'center',
 					alignItems: 'center',
-					marginTop: 'clamp(100px, 20dvh, 30dvh)',
 					width: '100vw',
-					marginBottom: '10dvh',
-					position: 'relative',
 				}}
 			>
 				<Grid item>
-					{/* <Typography
-						variant='h2'
-						sx={{
-							fontWeight: 700,
-							lineHeight: 0.7,
-							fontSize: { xs: 50 },
-						}}
-					>
-						i am
-					</Typography> */}
 					<Typography
 						align='center'
 						sx={{
@@ -59,11 +47,27 @@ function IntroductionSection(props) {
 							justifyContent: 'center',
 							padding: '30px',
 							marginTop: '10px',
+							gap: '10px 15px',
 							marginBottom: '-10px',
 						}}
 					>
 						<Grid item>
-							<ExploreButton text='Explore my works' />
+							<ButtonOutlined
+								text='About me'
+								onClick={() => {
+									alert('A');
+								}}
+							/>
+						</Grid>
+						<Grid item>
+							<ButtonFilled
+								text='My Projects'
+								onClick={() => {
+									document
+										.getElementById('sec-2')
+										.scrollIntoView({ behavior: 'smooth' });
+								}}
+							/>
 						</Grid>
 					</Grid>
 				</Grid>
@@ -81,7 +85,7 @@ function IntroductionSection(props) {
 					<GithubButton />
 				</Grid>
 			</Grid>
-		</>
+		</Box>
 	);
 }
 

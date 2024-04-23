@@ -13,6 +13,7 @@ function Header() {
 				alignItems: 'center',
 			}}
 		>
+			<></>
 			{/* <Grid item>
 				<img src={logo} style={{ width: '60px' }} />
 			</Grid> */}

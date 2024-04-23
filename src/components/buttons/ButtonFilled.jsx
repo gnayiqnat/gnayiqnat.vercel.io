@@ -1,9 +1,7 @@
-// ButtonOutlined.jsx
-import { Box, Button, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import React from 'react';
+import { Box, Button, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
-export default function ButtonOutlined({ text, onClick }) {
+export default function ButtonFilled({text, onClick}) {
 	return (
 		<>
 			<motion.div
@@ -17,16 +15,14 @@ export default function ButtonOutlined({ text, onClick }) {
 						justifyContent: 'center',
 					}}
 				>
-					<Button
-						variant='outlined'
+				<Button
 						sx={{
-							borderColor: 'primary.main',
-							backgroundColor: 'transparent',
+							backgroundColor: 'primary.main',
 							padding: '15px 20px',
 							width: '100%',
 							borderRadius: '15px',
 							'&:hover': {
-								backgroundColor: 'transparent',
+								backgroundColor: 'primary.main',
 							},
 						}}
 						onClick={() => {
@@ -38,7 +34,7 @@ export default function ButtonOutlined({ text, onClick }) {
 								opacity: 0.9,
 								fontFamily: 'Nunito',
 								textTransform: 'none',
-								color: 'primary.main',
+								color: 'hsl(216, 18%, 85%)',
 								fontWeight: '600',
 								fontSize: '18px',
 							}}

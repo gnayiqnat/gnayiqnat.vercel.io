@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import ButtonOutlined from './components/buttons/ButtonOutlined';
+import ButtonFilled from './components/buttons/ButtonFilled';
 
 export default function InProgressWarning(props) {
 	return (
@@ -24,26 +25,12 @@ export default function InProgressWarning(props) {
 				</Typography>
 			</Grid>
 			<Grid item>
-				<motion.button
+				<ButtonFilled
+					text={'Proceed Anyway'}
 					onClick={() => {
 						props.setIsFirstTime(false);
 					}}
-					whileHover={{ opacity: 0.3 }}
-					style={{
-						backgroundColor: 'transparent',
-						borderStyle: 'solid',
-						borderColor: '#c60054',
-						borderRadius: 20,
-						padding: '13px 15px',
-						cursor: 'pointer',
-					}}
-				>
-					<Typography
-						sx={{ color: '#c60054', fontSize: '20px', fontWeight: 500 }}
-					>
-						Proceed anyway
-					</Typography>
-				</motion.button>
+				/>
 			</Grid>
 		</Grid>
 	);
