@@ -8,8 +8,11 @@ import IntroductionSection from './components/IntroductionSection';
 import LanguageSection from './components/LanguageSection';
 import WorksSection from './components/WorksSection';
 import ParallaxText from './parallaxText/ParallaxText';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Homepage() {
+	const isMobile = useMediaQuery({query: '(max-width: 800px)'})
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -33,14 +36,14 @@ export default function Homepage() {
 						pointerEvents: 'none',
 					}}
 				>
-					<ParallaxText baseVelocity={0.03}>
+					<ParallaxText baseVelocity={0.05}>
 						<Typography
 							sx={{
-								opacity: 0.06,
+								opacity: 0.07,
 								color: 'secondary.main',
 								fontWeight: 700,
 								lineHeight: 0.5,
-								fontSize: 1200,
+								fontSize: '1200px',
 								marginLeft: '-100px',
 							}}
 						>
