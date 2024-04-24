@@ -1,11 +1,13 @@
 // components
-import { Box, duration } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import AboutMe from './AboutMeSection';
 import BackgroundTypography from './components/BackgroundTypography';
 import Header from './components/Header';
 import IntroductionSection from './components/IntroductionSection';
-import WorksSection from './components/WorksSection';
-import { motion } from 'framer-motion';
 import LanguageSection from './components/LanguageSection';
+import WorksSection from './components/WorksSection';
+import ParallaxText from './parallaxText/ParallaxText';
 
 export default function Homepage() {
 	return (
@@ -14,16 +16,45 @@ export default function Homepage() {
 			animate={{ opacity: 1 }}
 			transition={{ delay: 0.5, duration: 0.75 }}
 		>
-			<Header /> 
-			
-			<IntroductionSection />
+			<Header />
 
-			<WorksSection />
+			<Box sx={{ mt: '-50px' }}>
+				<IntroductionSection />
 
-			<LanguageSection />
+				<Box
+					sx={{
+						width: '100vw',
+						maxWidth: '100vw',
+						height: '100dvh',
+						overflow: 'hidden',
+						position: 'absolute',
+						top: '0%',
+						alignItems: 'start',
+						pointerEvents: 'none',
+					}}
+				>
+					<ParallaxText baseVelocity={0.03}>
+						<Typography
+							sx={{
+								opacity: 0.06,
+								color: 'secondary.main',
+								fontWeight: 700,
+								lineHeight: 0.5,
+								fontSize: 1200,
+								marginLeft: '-100px',
+							}}
+						>
+							gnayiqnat
+						</Typography>
+					</ParallaxText>
+				</Box>
 
-			{/* Backdrop */}
-			<BackgroundTypography />
+				<WorksSection />
+
+				<AboutMe />
+
+				<LanguageSection />
+			</Box>
 		</motion.div>
 	);
 }

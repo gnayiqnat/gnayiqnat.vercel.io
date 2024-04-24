@@ -1,24 +1,43 @@
 // Header.js
+import { Button, Grid, IconButton, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 import React from 'react';
-import { Grid } from '@mui/material';
-import logo from '/gnayiqnat-logo.png';
+import { FaGithub } from 'react-icons/fa';
 
 function Header() {
 	return (
 		<Grid
 			container
 			sx={{
-				padding: '30px 25px 0px 25px',
-				justifyContent: 'space-between',
+				padding: '25px',
+				
+				justifyContent: 'end',
 				alignItems: 'center',
 			}}
 		>
-			<></>
-			{/* <Grid item>
-				<img src={logo} style={{ width: '60px' }} />
-			</Grid> */}
+			
 		</Grid>
 	);
 }
 
 export default Header;
+
+// GithubButton
+function GithubButton() {
+	return (
+		<motion.div initial={{ opacity: 1 }} whileHover={{ opacity: 0.3 }}>
+			<IconButton
+				target='_blank'
+				href='https://github.com/gnayiqnat'
+				sx={{
+					color: 'primary.main',
+					gap: '10px',
+					textTransform: 'none',
+					borderRadius: '30px',
+				}}
+			>
+				<FaGithub fontSize='25px' />
+			</IconButton>
+		</motion.div>
+	);
+}

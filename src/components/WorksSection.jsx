@@ -41,14 +41,14 @@ function WorksSection() {
 						<Grid item key={i} sx={{ margin: '0 auto' }}>
 							<MotionCard
 								whileHover={{
-									borderColor: '#c60054',
+									borderColor: 'primary.main',
 									opacity: 1,
 								}}
 								variant='outlined'
 								sx={{
 									backgroundColor: 'transparent',
-									borderColor: '#550024',
-									opacity: 0.6,
+									borderColor: 'primary.main',
+									opacity: 0.8,
 									padding: 1.5,
 									borderRadius: 3,
 									width: '330px',

@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function ButtonFilled({text, onClick}) {
+	
 	return (
 		<>
 			<motion.div
@@ -26,7 +27,7 @@ export default function ButtonFilled({text, onClick}) {
 							},
 						}}
 						onClick={() => {
-							onClick && onClick();
+							onClick();
 						}}
 					>
 						<Typography

@@ -21,11 +21,13 @@ export default function ButtonOutlined({ text, onClick }) {
 						variant='outlined'
 						sx={{
 							borderColor: 'primary.main',
-							backgroundColor: 'transparent',
+							borderWidth: '1.8px',
+							backgroundColor: '#ffffff',
 							padding: '15px 20px',
 							width: '100%',
 							borderRadius: '15px',
 							'&:hover': {
+								borderWidth: '1.8px',
 								backgroundColor: 'transparent',
 							},
 						}}

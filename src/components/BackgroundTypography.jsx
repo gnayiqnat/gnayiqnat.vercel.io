@@ -13,6 +13,7 @@ function BackgroundTypography() {
 				opacity: 0.07,
 				top: '0%',
 				alignItems: 'start',
+				pointerEvents: 'none'
 			}}
 		>
 			<Typography
