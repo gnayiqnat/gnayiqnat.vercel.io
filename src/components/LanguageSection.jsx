@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
 
 export default function LanguageSection() {
 	const languagesList = [
@@ -46,36 +47,39 @@ export default function LanguageSection() {
 						sx={{
 							display: 'flex',
 							flexWrap: 'wrap',
-							gap: '25px',
+							gap: '30px',
 							alignItems: 'center',
 							justifyContent: 'center',
 						}}
 					>
 						{languagesList.map((e, i) => (
-							<Box
-								key={i}
-								sx={{
-									display: 'flex',
-									flexDirection: 'column',
-									alignItems: 'center',
-									padding: '10px',
-								}}
-							>
-								<img
-									style={{ width: '60px', height: '60px' }}
-									src={`/languages-icons/${e.img}`}
-								/>
-								<Typography
+							<motion.div whileHover={{scale: 1.1}}>
+								<Box
+									key={i}
 									sx={{
-										color: 'primary.main',
-										fontFamily: 'Nunito',
-										fontWeight: 500,
-										fontSize: '18px',
+										display: 'flex',
+										flexDirection: 'column',
+										alignItems: 'center',
+										padding: '10px',
+										gap: '5px',
 									}}
 								>
-									{e.name}
-								</Typography>
-							</Box>
+									<img
+										style={{ width: '70px', height: '70px' }}
+										src={`/languages-icons/${e.img}`}
+									/>
+									<Typography
+										sx={{
+											color: 'primary.main',
+											fontFamily: 'Nunito',
+											fontWeight: 500,
+											fontSize: '18px',
+										}}
+									>
+										{e.name}
+									</Typography>
+								</Box>
+							</motion.div>
 						))}{' '}
 					</Box>
 				</Box>
