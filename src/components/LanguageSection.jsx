@@ -8,6 +8,7 @@ export default function LanguageSection() {
 		{ name: 'React JS', img: 'react.svg' }, // worldvectorlogo.com
 		{ name: 'Python', img: 'python.svg' }, // worldvectorlogo.com
 		{ name: 'FastAPI', img: 'fastapi.svg' }, // worldvectorlogo.com
+		{ name: 'PostgreSQL', img: 'postgresql.svg' }, // https://wiki.postgresql.org/wiki/Logo
 	];
 	return (
 		<>
@@ -15,12 +16,10 @@ export default function LanguageSection() {
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
-					padding: '20px',
 					height: '100dvh',
 					width: '100vw',
 					gap: '20px',
 					justifyContent: 'center',
-
 					alignItems: 'center',
 				}}
 			>
@@ -38,38 +37,47 @@ export default function LanguageSection() {
 				</Typography>{' '}
 				<Box
 					sx={{
-						display: 'flex',
-						maxWidth: '450px',
-						flexWrap: 'wrap',
-						gap: '25px',
+						maxWidth: '500px',
+						display: 'grid',
+						placeContent: 'center',
 					}}
 				>
-					{languagesList.map((e, i) => (
-						<Box
-							key={i}
-							sx={{
-								display: 'flex',
-								flexDirection: 'column',
-								alignItems: 'center',
-								padding: '10px',
-							}}
-						>
-							<img
-								style={{ width: '60px', height: '60px' }}
-								src={`/languages-icons/${e.img}`}
-							/>
-							<Typography
+					<Box
+						sx={{
+							display: 'flex',
+							flexWrap: 'wrap',
+							gap: '25px',
+							alignItems: 'center',
+							justifyContent: 'center',
+						}}
+					>
+						{languagesList.map((e, i) => (
+							<Box
+								key={i}
 								sx={{
-									color: 'primary.main',
-									fontFamily: 'Nunito',
-									fontWeight: 500,
-									fontSize: '18px',
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+									padding: '10px',
 								}}
 							>
-								{e.name}
-							</Typography>
-						</Box>
-					))}{' '}
+								<img
+									style={{ width: '60px', height: '60px' }}
+									src={`/languages-icons/${e.img}`}
+								/>
+								<Typography
+									sx={{
+										color: 'primary.main',
+										fontFamily: 'Nunito',
+										fontWeight: 500,
+										fontSize: '18px',
+									}}
+								>
+									{e.name}
+								</Typography>
+							</Box>
+						))}{' '}
+					</Box>
 				</Box>
 			</Box>
 		</>
