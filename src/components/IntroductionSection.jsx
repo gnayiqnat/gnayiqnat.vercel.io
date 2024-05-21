@@ -64,10 +64,10 @@ function IntroductionSection() {
 						>
 							<Grid item>
 								<ButtonOutlined
-									text='About me'
+									text='My Skills'
 									onClick={() => {
 										document
-											.getElementById('about-me')
+											.getElementById('language')
 											.scrollIntoView({ behavior: 'smooth' });
 									}}
 								/>

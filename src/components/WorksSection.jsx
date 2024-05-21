@@ -31,10 +31,11 @@ function WorksSection() {
 				<Grid
 					container
 					sx={{
+						padding: 3,
 						display: 'flex',
 						gridTemplateColumns: '350px 350px',
 						gap: '30px',
-						height: '80dvh',
+						height: '100dvh',
 					}}
 				>
 					{listofWorks.map((e, i) => (

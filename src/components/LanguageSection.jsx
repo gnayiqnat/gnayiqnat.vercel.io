@@ -14,11 +14,13 @@ export default function LanguageSection() {
 	return (
 		<>
 			<Box
+				id='language'
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
 					height: '100dvh',
 					width: '100vw',
+					padding: '70px 0px',
 					gap: '20px',
 					justifyContent: 'center',
 					alignItems: 'center',

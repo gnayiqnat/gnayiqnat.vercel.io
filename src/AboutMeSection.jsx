@@ -5,7 +5,7 @@ export default function AboutMe() {
 		<>
 			<Box
 				id='about-me'
-				sx={{ height: '100dvh', display: 'grid', placeContent: 'center' }}
+				sx={{ padding: '50px 30px', display: 'grid', placeContent: 'center' }}
 			>
 				<Typography
 					gutterBottom

@@ -28,7 +28,7 @@ export default function Homepage() {
 					sx={{
 						width: '100vw',
 						maxWidth: '100vw',
-						height: '100dvh',
+						height: '100lvh',
 						overflow: 'hidden',
 						position: 'absolute',
 						top: '0%',
@@ -43,7 +43,7 @@ export default function Homepage() {
 								color: 'secondary.main',
 								fontWeight: 700,
 								lineHeight: 0.5,
-								fontSize: '1200px',
+								fontSize: '1450px',
 								marginLeft: '-100px',
 							}}
 						>
@@ -54,7 +54,7 @@ export default function Homepage() {
 
 				<WorksSection />
 
-				<AboutMe />
+				{/*<AboutMe />*/}
 
 				<LanguageSection />
 			</Box>
