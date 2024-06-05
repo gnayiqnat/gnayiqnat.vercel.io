@@ -11,7 +11,7 @@ function IntroductionSection() {
 		<>
 			<Box
 				sx={{
-					height: '100dvh',
+					height: '100lvh',
 					display: 'grid',
 					placeContent: 'center',
 				}}
