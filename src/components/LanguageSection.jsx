@@ -18,7 +18,7 @@ export default function LanguageSection() {
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
-					height: '100dvh',
+					height: '100lvh',
 					width: '100vw',
 					padding: '70px 0px',
 					gap: '20px',

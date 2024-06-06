@@ -15,7 +15,7 @@ function WorksSection() {
 				container
 				sx={{
 					padding: 3,
-					height: '100dvh',
+					height: '100lvh',
 					display: 'grid',
 					placeContent: 'center',
 				}}
