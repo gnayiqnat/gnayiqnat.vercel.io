@@ -9,6 +9,7 @@ import LanguageSection from './components/LanguageSection';
 import WorksSection from './components/WorksSection';
 import ParallaxText from './parallaxText/ParallaxText';
 import { useMediaQuery } from 'react-responsive';
+import Footer from './components/Footer';
 
 export default function Homepage() {
 	const isMobile = useMediaQuery({query: '(max-width: 800px)'})
@@ -57,6 +58,8 @@ export default function Homepage() {
 				{/*<AboutMe />*/}
 
 				<LanguageSection />
+
+				<Footer />
 			</Box>
 		</motion.div>
 	);
