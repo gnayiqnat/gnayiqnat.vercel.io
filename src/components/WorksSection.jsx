@@ -35,7 +35,7 @@ function WorksSection() {
 						display: 'flex',
 						gridTemplateColumns: '350px 350px',
 						gap: '30px',
-						height: '100dvh',
+						height: '100lvh',
 					}}
 				>
 					{listofWorks.map((e, i) => (
