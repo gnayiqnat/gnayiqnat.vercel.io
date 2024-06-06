@@ -1,5 +1,5 @@
 import './pStyles.css';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
 	motion,
 	useScroll,
@@ -9,6 +9,7 @@ import {
 	useVelocity,
 	useAnimationFrame,
 	wrap,
+	useInView,
 } from 'framer-motion';
 import React from 'react';
 
@@ -19,8 +20,24 @@ interface ParallaxProps {
 
 // Credit: Code from Framer motion's docs
 function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+	// Optimization of Parallax Text
+	const refIsInView = useRef(null);
+	const isInView = useInView(refIsInView);
+
+	const [pauseParallaxText, setPauseParallaxText] = useState(false);
+
+	useEffect(() => {
+		if (isInView) {
+			setPauseParallaxText(false);
+		} else {
+			setPauseParallaxText(true);
+		}
+	}, [isInView]);
+
+	// Parallax Text
 	const baseX = useMotionValue(1);
 	const { scrollY } = useScroll();
+
 	const scrollVelocity = useVelocity(scrollY);
 	const smoothVelocity = useSpring(scrollVelocity, {
 		damping: 50,
@@ -38,23 +55,31 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 	const x = useTransform(baseX, (v) => `${wrap(-10, -60, v)}%`);
 
 	const directionFactor = useRef<number>(1);
-	useAnimationFrame((t, delta) => {
-		let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-		/**
-		 * This is what changes the direction of the scroll once we
-		 * switch scrolling directions.
-		 */
-		if (velocityFactor.get() < 0) {
-			directionFactor.current = -1;
-		} else if (velocityFactor.get() > 0) {
-			directionFactor.current = 1;
-		}
+	 useAnimationFrame(
+		!pauseParallaxText
+			? (t, delta) => {
+					let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-		moveBy += directionFactor.current * moveBy * velocityFactor.get();
+					/**
+					 * This is what changes the direction of the scroll once we
+					 * switch scrolling directions.
+					 */
+					if (velocityFactor.get() < 0) {
+						directionFactor.current = -1;
+					} else if (velocityFactor.get() > 0) {
+						directionFactor.current = 1;
+					}
 
-		baseX.set(baseX.get() + moveBy);
-	});
+					moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+					baseX.set(baseX.get() + moveBy);
+			  }
+			: () => {
+					return;
+			  }
+	);
+	 
 
 	/**
 	 * The number of times to repeat the child text should be dynamically calculated
@@ -63,8 +88,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 	 * we have four children (100% / 4). This would also want deriving from the
 	 * dynamically generated number of children.
 	 */
+
 	return (
-		<div className='parallax'>
+		<div ref={refIsInView} className='parallax'>
 			<motion.div className='scroller' style={{ x }}>
 				<span>{children} </span>
 				<span>{children} </span>
