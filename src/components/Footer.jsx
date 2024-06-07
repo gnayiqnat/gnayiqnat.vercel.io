@@ -39,7 +39,7 @@ export default function Footer() {
 							href={'mailto:contact@tanqiyang.com'}
 							style={{
 								fontFamily: 'Nunito',
-                                fontWeight: '600',
+                                fontWeight: '00',
                                 fontSize: '17px',
 								color: '#000000',
 								textDecoration: 'none',
@@ -61,7 +61,7 @@ export default function Footer() {
 				<Box
 					sx={{ opacity: 0.7, display: 'flex', flexDirection: 'row-reverse' }}
 				>
-					<a href='htps://github.com/gnayiqnat' style={{ color: '#000000' }}>
+					<a href='https://github.com/gnayiqnat' target='_blank' style={{ color: '#000000' }}>
 						<FaGithub size={35} />
 					</a>
 				</Box>
