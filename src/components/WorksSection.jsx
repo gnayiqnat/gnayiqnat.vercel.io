@@ -2,7 +2,10 @@
 import React, { useRef } from 'react';
 import { Grid, Card, Typography, Box } from '@mui/material';
 import { motion, useScroll } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 function WorksSection() {
+	const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
+
 	const MotionCard = motion(Card);
 
 	const listofWorks = [
@@ -33,9 +36,9 @@ function WorksSection() {
 					sx={{
 						padding: 3,
 						display: 'flex',
-						gridTemplateColumns: '350px 350px',
+						alignItems: 'start',
 						gap: '30px',
-						height: '100lvh',
+						height: '80lvh',
 					}}
 				>
 					{listofWorks.map((e, i) => (
