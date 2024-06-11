@@ -6,20 +6,9 @@ import './App.css';
 // Pages
 import Homepage from './homepage';
 import { useEffect } from 'react';
-import InProgressWarning from './InProgressWarning';
 
 // ---------------------
 function App() {
-	const [IsFirstTime, setIsFirstTime] = useState(true);
-
-	useEffect(() => {
-		if (window.location.href.includes('?bypass')) {
-			setIsFirstTime(false);
-		}
-		if (IsFirstTime === false) {
-			document.cookie = 'isFirstTime=false; SameSite=Strict; Secure';
-		}
-	}, [IsFirstTime]);
 
 	return (
 		<>
@@ -29,11 +18,7 @@ function App() {
 						exact
 						path='/'
 						element={
-							IsFirstTime === false || document.cookie.includes('isFirstTime=false') ? (
 								<Homepage />
-							) : (
-								<InProgressWarning setIsFirstTime={setIsFirstTime} />
-							)
 						}
 					/>
 				</Routes>
