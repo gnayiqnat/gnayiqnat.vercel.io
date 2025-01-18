@@ -9,7 +9,7 @@ function WorksSection() {
 	const MotionCard = motion(Card);
 
 	const listofWorks = [
-		{ url: 'https://digitalascent.space', img: '/digitalascent-peek.png' },
+		{ url: 'https://digiasc.pages.dev', img: '/digitalascent-peek.png' },
 		{ url: 'https://msssa.pages.dev', img: '/msssa-peek.png' },
 	];
 	return (

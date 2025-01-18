@@ -48,7 +48,7 @@ export default function Homepage() {
 								marginLeft: '-100px',
 							}}
 						>
-							gnayiqnat
+							tanqiyang
 						</Typography>
 					</ParallaxText>
 				</Box>

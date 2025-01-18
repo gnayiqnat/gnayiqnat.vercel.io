@@ -19,9 +19,9 @@ export default function ButtonFilled({text, onClick}) {
 				<Button
 						sx={{
 							backgroundColor: 'primary.main',
-							padding: '15px 20px',
+							padding: '13px 20px',
 							width: '100%',
-							borderRadius: '15px',
+							borderRadius: '7px',
 							'&:hover': {
 								backgroundColor: 'primary.main',
 							},
@@ -32,10 +32,10 @@ export default function ButtonFilled({text, onClick}) {
 					>
 						<Typography
 							sx={{
-								opacity: 0.9,
+								opacity: 1,
 								fontFamily: 'Nunito',
 								textTransform: 'none',
-								color: 'hsl(216, 18%, 85%)',
+								color: 'hsl(218, 42.20%, 91.20%)',
 								fontWeight: '600',
 								fontSize: '18px',
 							}}

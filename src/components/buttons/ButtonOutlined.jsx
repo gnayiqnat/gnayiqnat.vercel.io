@@ -18,14 +18,13 @@ export default function ButtonOutlined({ text, onClick }) {
 					}}
 				>
 					<Button
-						variant='outlined'
 						sx={{
 							borderColor: 'primary.main',
 							borderWidth: '1.8px',
 							backgroundColor: '#ffffff',
-							padding: '15px 20px',
+							padding: '12px 18px',
 							width: '100%',
-							borderRadius: '15px',
+							borderRadius: '7px',
 							'&:hover': {
 								borderWidth: '1.8px',
 								backgroundColor: 'transparent',
@@ -40,7 +39,6 @@ export default function ButtonOutlined({ text, onClick }) {
 								opacity: 0.9,
 								fontFamily: 'Nunito',
 								textTransform: 'none',
-								color: 'primary.main',
 								fontWeight: '600',
 								fontSize: '18px',
 							}}

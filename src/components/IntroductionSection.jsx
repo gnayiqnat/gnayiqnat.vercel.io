@@ -22,7 +22,7 @@ function IntroductionSection() {
 						flexDirection: 'column',
 						justifyContent: 'center',
 						alignItems: 'center',
-						width: '100vw',
+						width: '80vw',
 					}}
 				>
 					<Grid item>
@@ -31,13 +31,15 @@ function IntroductionSection() {
 							align='center'
 							sx={{
 								color: 'primary.main',
-								fontWeight: 700,
-								lineHeight: 0.5,
-								fontSize: { xs: 60, sm: 80, md: 100 },
+								fontWeight: 400,
+								lineHeight: 1,
+								fontSize: {xs:30 , md: 40},
+								maxWidth: 700,
 								marginBottom: '35px',
 							}}
 						>
-							gnayiqnat
+							Hello, I am <b>Tan Qi Yang. </b> A full-stack web developer based in
+							Malaysia.
 						</Typography>
 						{/*<Typography
 						align='center'
@@ -89,6 +91,5 @@ function IntroductionSection() {
 		</>
 	);
 }
-
 
 export default IntroductionSection;
