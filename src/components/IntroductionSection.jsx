@@ -33,7 +33,7 @@ function IntroductionSection() {
 								color: 'primary.main',
 								fontWeight: 400,
 								lineHeight: 1,
-								fontSize: {xs:30 , md: 40},
+								fontSize: { xs: 30, md: 40 },
 								maxWidth: 700,
 								marginBottom: '35px',
 							}}
